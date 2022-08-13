@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryForm from '../GalleryForm/GalleryForm';
 import './App.css';
+//import { addListener } from 'nodemon';
 
 
 
@@ -29,6 +31,20 @@ function App() {
     })
   }
 
+  const addItem = () => {
+    console.log('in addItem');
+    axios({
+      method: 'POST',
+      url: '/gallery',
+    }).then((response) => {
+      console.log(response)
+      //getList();
+    }).catch((err) => {
+      alert('error adding item');
+      console.log(err);
+    })
+  }
+
 
   return (
 
@@ -36,6 +52,7 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
+      <GalleryForm addItem={addItem} />
       <GalleryList items={galleryItems} getList={getList} />
     </div>
 
