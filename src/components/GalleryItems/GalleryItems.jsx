@@ -1,23 +1,60 @@
+import React, { useState } from 'react'
 
 
 function GalleryItems({ item, loveImage }) {
+
+    const [isClicked, setIsClicked] = useState(false)
+
+    const handleClick = () => {
+        console.log('in handle click')
+        if (isClicked === false) {
+            setIsClicked(true);
+        } else {
+            setIsClicked(false);
+        }
+
+    }
+
     console.log(item.description);
-    return (
-        <>
-            <div className="itemContainer">
-                <div className="imageDiv">
-                    <img src={item.path} />
+
+    if (isClicked === false) {
+        return (
+            <>
+
+                <div className="itemContainer">
+                    <div onClick={handleClick}>
+                        <img src={item.path} />
+                    </div>
+                    <div>
+                        <button onClick={() => loveImage(item)}>Love It!</button>
+                        <p>{item.likes} people love this!</p>
+                    </div>
                 </div>
-                <div>
-                    <button onClick={() => loveImage(item)}>Love It!</button>
-                    <p>{item.likes} people love this!</p>
+
+
+
+            </>
+        );
+    } else {
+        return (
+            <>
+
+                <div className="itemContainer">
+                    <div onClick={handleClick}>
+                        {item.description}
+                    </div>
+                    <div>
+                        <button onClick={() => loveImage(item)}>Love It!</button>
+                        <p>{item.likes} people love this!</p>
+                    </div>
+
                 </div>
-                <div className="descriptionDiv">
-                    {item.description}
-                </div>
-            </div>
-        </>
-    );
+
+
+
+            </>
+        );
+    }
 
 }
 
