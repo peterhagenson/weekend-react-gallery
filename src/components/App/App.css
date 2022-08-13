@@ -13,3 +13,21 @@
   font-size: 1.5em;
 }
 
+.descriptionDiv {
+  width: 100px;
+  height: 100px;
+  display:flex;
+}
+
+/* .imageDiv {
+  display: flex;
+} */
+
+/* .itemContainer {
+  display: flex;
+} */
+
+.galleryItemsContainer {
+  display: flex;
+
+}
