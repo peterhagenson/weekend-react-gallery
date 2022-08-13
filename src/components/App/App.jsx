@@ -27,15 +27,16 @@ function App() {
       console.log(response.data)
     }).catch((err) => {
       alert('error getting gallery');
-      console.log(err);
+      //console.log(err);
     })
   }
 
-  const addItem = () => {
-    console.log('in addItem');
+  const addItem = (newItem) => {
+    console.log('in addItem', newItem);
     axios({
       method: 'POST',
       url: '/gallery',
+      data: newItem
     }).then((response) => {
       console.log(response)
       //getList();
