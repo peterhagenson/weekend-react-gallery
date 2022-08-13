@@ -10,9 +10,18 @@ function GalleryList({ items, getList }) {
 
     const loveImage = (item) => {
         console.log('in love image')
+        console.log(item.likes);
+        let likes = item.likes;
+        console.log(likes);
+        likes++
+        console.log(likes);
+
         axios({
             method: 'PUT',
-            url: `/gallery/like/${item.id}`
+            url: `/gallery/like/${item.id}`,
+            data: {
+                likes: likes
+            }
         }).then(response => {
             console.log(response);
             getList()

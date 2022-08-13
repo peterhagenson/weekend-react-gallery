@@ -39,7 +39,7 @@ function App() {
       data: newItem
     }).then((response) => {
       console.log(response)
-      //getList();
+      getList();
     }).catch((err) => {
       alert('error adding item');
       console.log(err);

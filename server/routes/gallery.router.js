@@ -25,14 +25,32 @@ router.post('/', (req, res) => {
 // PUT Route
 router.put('/like/:id', (req, res) => {
     console.log(req.params);
-    const galleryId = req.params.id;
-    for(const galleryItem of galleryItems) {
-        if(galleryItem.id == galleryId) {
-            galleryItem.likes += 1;
-        }
-    }
-    res.sendStatus(200);
-}); // END PUT Route
+    console.log(req.body);
+    let idToUpdate = req.params.id;
+    let numberOfLikes = req.body.likes;
+    let queryText = `
+    UPDATE "galleryItems"
+    SET "likes" = $2
+    WHERE "id" = $1`;
+    pool.query(queryText, [idToUpdate, numberOfLikes])
+    .then((result) => {
+        console.log('added like');
+        res.sendStatus(201);
+    }).catch((error) => {
+        console.log('error updatng likes')
+        res.sendStatus(500);
+    });
+});
+    
+
+    // const galleryId = req.params.id;
+    // for(const galleryItem of galleryItems) {
+    //     if(galleryItem.id == galleryId) {
+    //         galleryItem.likes += 1;
+    //     }
+    // }
+    
+ // END PUT Route
 
 // // GET Route
 router.get('/', (req, res) => {
