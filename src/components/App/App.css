@@ -13,21 +13,35 @@
   font-size: 1.5em;
 }
 
-.descriptionDiv {
+/* .descriptionDiv {
   width: 100px;
   height: 100px;
   display:flex;
-}
+} */
 
 /* .imageDiv {
   display: flex;
 } */
 
-/* .itemContainer {
-  display: flex;
-} */
+.itemContainer {
+
+ 
+  
+  margin: 50px;
+
+}
 
 .galleryItemsContainer {
   display: flex;
+  flex-wrap: wrap;
 
+}
+
+.descriptionContainer {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  border: solid
+  
+  
 }

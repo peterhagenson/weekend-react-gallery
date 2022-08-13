@@ -12,7 +12,6 @@ function GalleryItems({ item, loveImage }) {
         } else {
             setIsClicked(false);
         }
-
     }
 
     console.log(item.description);
@@ -20,7 +19,6 @@ function GalleryItems({ item, loveImage }) {
     if (isClicked === false) {
         return (
             <>
-
                 <div className="itemContainer">
                     <div onClick={handleClick}>
                         <img src={item.path} />
@@ -30,28 +28,20 @@ function GalleryItems({ item, loveImage }) {
                         <p>{item.likes} people love this!</p>
                     </div>
                 </div>
-
-
-
             </>
         );
     } else {
         return (
             <>
-
                 <div className="itemContainer">
-                    <div onClick={handleClick}>
+                    <div className="descriptionContainer" onClick={handleClick}>
                         {item.description}
                     </div>
                     <div>
                         <button onClick={() => loveImage(item)}>Love It!</button>
                         <p>{item.likes} people love this!</p>
                     </div>
-
                 </div>
-
-
-
             </>
         );
     }
