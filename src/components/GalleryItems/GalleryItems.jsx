@@ -21,7 +21,7 @@ function GalleryItems({ item, loveImage }) {
             <>
                 <div className="itemContainer">
                     <div onClick={handleClick}>
-                        <img src={item.path} />
+                        <img src={item.path} className="img" />
                     </div>
                     <div>
                         <button onClick={() => loveImage(item)}>Love It!</button>
