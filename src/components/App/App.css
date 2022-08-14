@@ -1,12 +1,22 @@
 .App {
   text-align: center;
+  
+
+}
+
+:root {
+  background-color: #F4B400
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #1976d2 ;
   padding: 1em;
   color: white;
   margin-bottom: 1em;
+}
+
+h2 {
+  color: #1976d2 
 }
 
 .App-title {
@@ -24,11 +34,7 @@
 } */
 
 .itemContainer {
-
- 
-  
   margin: 50px;
-
 }
 
 .galleryItemsContainer {
@@ -42,8 +48,11 @@
 .descriptionContainer {
   width: 200px;
   height: 200px;
-  display: flex;
-  border: solid
+  /* display: flex; */
+  text-align: center;
+ 
+
+  /* border: solid */
   
   
 }

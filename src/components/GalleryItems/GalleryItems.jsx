@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ThumbUp from '@mui/icons-material/ThumbUp';
+//import mr from '@mui/system';
 
 
 
@@ -31,8 +32,8 @@ function GalleryItems({ item, loveImage, deleteImage }) {
                     </div>
                     <div>
                         <p>{item.likes} people love this!</p>
-                        <Button startIcon={<ThumbUp />} variant="contained" size="small" onClick={() => loveImage(item)}>Love It!</Button>
-                        <Button startIcon={<DeleteIcon />} variant="contained" size="small" onClick={() => deleteImage(item)}>Delete</Button>
+                        <Button sx={{ mr: 1 }} startIcon={<ThumbUp />} variant="contained" size="small" onClick={() => loveImage(item)}>Love It!</Button>
+                        <Button startIcon={<DeleteIcon />} variant="contained" size="small" className="deleteBtn" onClick={() => deleteImage(item)}>Delete</Button>
                     </div>
                 </div>
             </>

@@ -27,8 +27,8 @@ function GalleryForm({ addItem }) {
     return (
         <form onSubmit={handleSubmit}>
             <h2>Add Destination</h2>
-            <TextField size="small" onChange={(event) => setPath(event.target.value)} placeholder="image url" value={path}></TextField>
-            <TextField size="small" onChange={(event) => setDescription(event.target.value)} placeholder="image description" value={description}></TextField>
+            <TextField sx={{ mr: 1 }} size="small" variant="standard" onChange={(event) => setPath(event.target.value)} placeholder="image url" value={path}></TextField>
+            <TextField sx={{ mr: 1 }} size="small" variant="standard" onChange={(event) => setDescription(event.target.value)} placeholder="image description" value={description}></TextField>
             <Button startIcon={<Add />} variant="contained" size="medium" onClick={handleSubmit}>Add</Button>
         </form>
     )

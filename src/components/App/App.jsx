@@ -60,7 +60,6 @@ function App() {
       <GalleryForm addItem={addItem} />
       <GalleryList items={galleryItems} getList={getList} />
     </div>
-
   );
 }
 
