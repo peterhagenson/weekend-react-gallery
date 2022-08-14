@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import Button from '@mui/material/Button';
+import Add from '@mui/icons-material/Add';
+
+
 
 
 function GalleryForm({ addItem }) {
@@ -18,10 +22,10 @@ function GalleryForm({ addItem }) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h2>Add Image</h2>
+            <h2>Add Destination</h2>
             <input onChange={(event) => setPath(event.target.value)} placeholder="image url" value={path}></input>
             <input onChange={(event) => setDescription(event.target.value)} placeholder="image description" value={description}></input>
-            <button onClick={handleSubmit}>Add</button>
+            <Button startIcon={<Add />} variant="contained" size="small" onClick={handleSubmit}>Add</Button>
         </form>
     )
 }

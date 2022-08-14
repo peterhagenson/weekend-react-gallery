@@ -3,7 +3,11 @@ import React, { useState, useEffect } from 'react'
 import GalleryList from '../GalleryList/GalleryList';
 import GalleryForm from '../GalleryForm/GalleryForm';
 import './App.css';
-//import { addListener } from 'nodemon';
+//import Button from '@mui/material/Button';
+
+//import * as React from 'react';
+//import Button from '@mui/material/Button';
+
 
 
 
@@ -51,7 +55,7 @@ function App() {
 
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Gallery of My Life</h1>
+        <h1 className="App-title">My Travel Destination Wish List</h1>
       </header>
       <GalleryForm addItem={addItem} />
       <GalleryList items={galleryItems} getList={getList} />
