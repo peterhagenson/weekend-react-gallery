@@ -30,6 +30,19 @@ function GalleryList({ items, getList }) {
         })
     }
 
+    const deleteImage = (item) => {
+        console.log('delete clicked')
+        axios({
+            method: 'DELETE',
+            url: `/gallery/like/${item.id}`,
+        }).then(response => {
+            console.log(response);
+            getList()
+        }).catch(err => {
+            console.log(err);
+        })
+    }
+
     return (
         <>
             <div className="galleryItemsContainer">
@@ -37,7 +50,7 @@ function GalleryList({ items, getList }) {
 
                     items.map((item) => (
 
-                        <GalleryItems key={item.id} item={item} loveImage={loveImage} />
+                        <GalleryItems key={item.id} item={item} loveImage={loveImage} deleteImage={deleteImage} />
 
                     ))
 

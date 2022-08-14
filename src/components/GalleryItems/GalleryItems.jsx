@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-function GalleryItems({ item, loveImage }) {
+function GalleryItems({ item, loveImage, deleteImage }) {
 
     const [isClicked, setIsClicked] = useState(false)
 
@@ -24,8 +24,9 @@ function GalleryItems({ item, loveImage }) {
                         <img src={item.path} className="img" />
                     </div>
                     <div>
-                        <button onClick={() => loveImage(item)}>Love It!</button>
                         <p>{item.likes} people love this!</p>
+                        <button onClick={() => loveImage(item)}>Love It!</button>
+                        <button onClick={() => deleteImage(item)}>Delete</button>
                     </div>
                 </div>
             </>
