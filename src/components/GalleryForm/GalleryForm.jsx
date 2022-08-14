@@ -19,6 +19,8 @@ function GalleryForm({ addItem }) {
             path: path,
             description: description
         }
+        setPath('');
+        setDescription('');
         addItem(newItem);
     }
 
