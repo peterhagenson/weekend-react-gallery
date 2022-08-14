@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import Add from '@mui/icons-material/Add';
+import TextField from '@mui/material/TextField';
+
 
 
 
@@ -23,9 +25,9 @@ function GalleryForm({ addItem }) {
     return (
         <form onSubmit={handleSubmit}>
             <h2>Add Destination</h2>
-            <input onChange={(event) => setPath(event.target.value)} placeholder="image url" value={path}></input>
-            <input onChange={(event) => setDescription(event.target.value)} placeholder="image description" value={description}></input>
-            <Button startIcon={<Add />} variant="contained" size="small" onClick={handleSubmit}>Add</Button>
+            <TextField size="small" onChange={(event) => setPath(event.target.value)} placeholder="image url" value={path}></TextField>
+            <TextField size="small" onChange={(event) => setDescription(event.target.value)} placeholder="image description" value={description}></TextField>
+            <Button startIcon={<Add />} variant="contained" size="medium" onClick={handleSubmit}>Add</Button>
         </form>
     )
 }
