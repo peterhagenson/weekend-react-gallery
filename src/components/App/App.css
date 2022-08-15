@@ -47,9 +47,11 @@ h2 {
 
 .descriptionContainer {
   width: 200px;
-  height: 200px;
+  height: auto;
   /* display: flex; */
   text-align: center;
+  padding-top: 15%;
+  padding-bottom: 25%;
  
 
   /* border: solid */
@@ -59,4 +61,7 @@ h2 {
 
 .img {
   width: 200px;
+  border-radius: 10%;
 }
+
+
