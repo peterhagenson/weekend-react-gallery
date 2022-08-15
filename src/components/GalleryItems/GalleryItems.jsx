@@ -46,8 +46,8 @@ function GalleryItems({ item, loveImage, deleteImage }) {
                         {item.description}
                     </div>
                     <div>
-                        <Button variant="contained" size="small" onClick={() => loveImage(item)}>Love It!</Button>
                         <p>{item.likes} people love this!</p>
+                        <Button variant="contained" size="small" onClick={() => loveImage(item)}>Love It!</Button>
                     </div>
                 </div>
             </>
